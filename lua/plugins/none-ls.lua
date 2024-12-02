@@ -7,7 +7,7 @@ return {
   "nvimtools/none-ls.nvim",
   opts = function(_, opts)
     -- opts variable is the default configuration table for the setup function call
-    -- local null_ls = require "null-ls"
+    local null_ls = require "null-ls"
 
     -- Check supported formatters and linters
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
@@ -17,8 +17,17 @@ return {
     -- (If you wish to replace, use `opts.sources = {}` instead of the `list_insert_unique` function)
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettier,
+      null_ls.builtins.formatting.stylua,
+      null_ls.builtins.formatting.prettier,
+      -- null_ls.builtins.diagnostics.deno_lint
+      null_ls.builtins.formatting.biome,
+      null_ls.builtins.formatting.eslint,
+      null_ls.builtins.diagnostics.eslint,
+      null_ls.builtins.formatting.shfmt,
+      null_ls.builtins.diagnostics.shellcheck,
+      null_ls.builtins.code_actions.refactoring,
+      -- GH Actions Linter, brew install actionlint first.
+      null_ls.builtins.diagnostics.actionlint,
     })
   end,
 }
