@@ -37,6 +37,11 @@ return {
   -- YAML Language Pack
   { import = "astrocommunity.pack.yaml" },
 
+  -- Leap quickly to text on screen
+  { import = "astrocommunity.motion.leap-nvim" },
+  -- Enhanced f, F, t, T, /, ? with tags for quickly jumping to matches
+  { import = "astrocommunity.motion.flash-nvim" },
+
   -- Snippets integrated natively, uses friendly-snippets for expansion
   { import = "astrocommunity.snippet.nvim-snippets" },
 
