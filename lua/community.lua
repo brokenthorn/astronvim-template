@@ -8,9 +8,10 @@ return {
 
   -- Available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
+  -- These two themes have the widest feature set, incl. semantic highlighting,
+  -- they are frequently maintained and have support for tons of plugins:
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.colorscheme.github-nvim-theme" },
 
   { import = "astrocommunity.pack.lua" },
 

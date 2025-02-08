@@ -13,11 +13,11 @@ return {
     -- AstroTheme:
     -- https://github.com/AstroNvim/astrotheme
     -- Supports: astrodark, astrolight, astromars
-    -- colorscheme = "astromars",
+    -- colorscheme = "astrodark",
 
-    -- Catppuccin:
+    -- latte, frappe, macchiato, mocha, increasing order of contrast:
     -- colorscheme = "catppuccin-mocha",
 
-    colorscheme = "kanagawa-dragon",
+    colorscheme = "kanagawa-wave",
   },
 }
