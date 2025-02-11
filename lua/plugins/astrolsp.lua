@@ -17,19 +17,19 @@ return {
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
-      -- format_on_save = {
-      --   enabled = true, -- enable or disable format on save globally
-      --   allow_filetypes = { -- enable format on save for specified filetypes only
-      --     -- "go",
-      --   },
-      --   ignore_filetypes = { -- disable format on save for specified filetypes
-      --     -- "python",
-      --   },
-      -- },
+      format_on_save = {
+        enabled = true, -- enable or disable format on save globally
+        -- allow_filetypes = { -- enable format on save for specified filetypes only
+        --   -- "go",
+        -- },
+        -- ignore_filetypes = { -- disable format on save for specified filetypes
+        --   -- "python",
+        -- },
+      },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
-        "vtsls",
+        -- "vtsls",
       },
       -- timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -44,6 +44,7 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       vtsls = {
+        -- See schema here: https://github.com/yioneko/vtsls/blob/main/packages/service/configuration.schema.json
         settings = {
           typescript = {
             updateImportsOnFileMove = { enabled = "always" },
@@ -69,6 +70,15 @@ return {
           },
           vtsls = {
             enableMoveToFileCodeAction = true,
+            autoUseWorkspaceTsdk = true,
+            typescript = {
+              preferGoToSourceDefinition = true,
+              preferences = { useAliasesForRenames = false },
+            },
+            javascript = {
+              preferGoToSourceDefinition = true,
+              preferences = { useAliasesForRenames = false },
+            },
           },
         },
       },
